@@ -1,0 +1,20 @@
+** Business Goals for Analytics
+
+1️) User Engagement & Watch Behavior
+
+- How many users are active daily, weekly, and monthly?
+- How much time do users spend watching content?
+- What are the most-watched movies and TV shows?
+- Where do users stop watching? (drop-off analysis)
+
+2️) Content Performance Analysis
+
+- What genres are the most popular?
+- What are the top-rated movies & TV shows?
+- What content is trending in the last 7 or 30 days?
+
+3️) Subscription & Revenue Metrics
+
+- What is our Monthly Recurring Revenue (MRR)?
+- What is our churn rate (users canceling subscriptions)?
+- What is the growth rate of new subscribers?

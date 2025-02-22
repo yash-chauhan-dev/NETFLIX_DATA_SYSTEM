@@ -1,0 +1,34 @@
+** Before designing the database, we need to clarify the key functionalities of the platform. 
+** Here are some essential questions to consider:
+
+1) User Management:
+
+- Users should be able to sign up, log in, and manage their profiles.
+- A single account can have multiple user profiles (like Netflix’s user profiles).
+- Users should be able to subscribe to different plans (Basic, Standard, Premium).
+
+2) Content Management:
+
+- The platform should store movies, TV shows, and other types of content.
+- Each movie or show has metadata (title, genre, language, release year, etc.).
+- TV shows should have seasons and episodes.
+
+3) Streaming & Watching History:
+
+- Users should be able to watch content and continue from where they left off.
+- The system should track the watch history of each user.
+
+4)Recommendations & Ratings:
+
+- Users should be able to rate movies/shows.
+- The system should store user preferences for recommendation purposes.
+
+5) Subscription & Payments:
+
+- Users should be able to subscribe and manage their payments.
+- Different subscription plans should be supported.
+
+6)Performance Considerations:
+
+- The database should handle a large volume of data and concurrent users.
+- Queries should be optimized for fast retrieval.
