@@ -21,7 +21,7 @@ try:
         dbname="netflix_streaming",
         user="user",
         password="password",
-        host="192.168.29.124",
+        host="localhost",
         port="5432"
     )
     cursor = conn.cursor()
