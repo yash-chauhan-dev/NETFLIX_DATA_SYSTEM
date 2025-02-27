@@ -50,7 +50,7 @@ subscription_plans = [
 ]
 cursor.executemany(
     "INSERT INTO subscription_plans (plan_name, price, max_devices) VALUES (%s, %s, %s) ON CONFLICT DO NOTHING", subscription_plans)
-conn.commit()  # ✅ Ensure subscription plans exist before referencing them
+conn.commit()
 logging.info("Subscription plans inserted and committed.")
 
 # Insert Genres and Commit
@@ -58,7 +58,7 @@ genres = ["Action", "Comedy", "Drama", "Horror", "Sci-Fi",
           "Thriller", "Romance", "Documentary", "Adventure"]
 cursor.executemany("INSERT INTO genres (genre_name) VALUES (%s) ON CONFLICT DO NOTHING", [
                    (g,) for g in genres])
-conn.commit()  # ✅ Ensure genres exist before referencing them
+conn.commit()
 logging.info("Genres inserted and committed.")
 
 # Fetch Genre IDs
@@ -90,7 +90,6 @@ for i in range(num_users):
 
     show_progress(i + 1, num_users, "Generating Users")
 
-# ✅ Commit Users & Profiles before adding subscriptions
 conn.commit()
 logging.info("Users and profiles inserted and committed.")
 
@@ -106,7 +105,6 @@ for i, user_id in enumerate(user_ids):
 
     show_progress(i + 1, len(user_ids), "Generating Subscriptions")
 
-# ✅ Commit Subscriptions before inserting movies
 conn.commit()
 logging.info("Subscriptions inserted and committed.")
 
@@ -145,7 +143,6 @@ for i in range(num_movies_shows):
 
     show_progress(i + 1, num_movies_shows, "Generating Movies & Shows")
 
-# ✅ Commit Movies & TV Shows before adding watch history
 conn.commit()
 logging.info("Movies and TV shows inserted and committed.")
 
@@ -169,7 +166,6 @@ for i, profile_id in enumerate(profile_ids):
     show_progress(i + 1, len(profile_ids),
                   "Generating Watch History & Ratings")
 
-# ✅ Commit Watch History & Ratings last
 conn.commit()
 logging.info("Watch history and ratings inserted and committed.")
 

@@ -1,12 +1,11 @@
 -- Daily, Weekly, and Monthly Active Users (DAU, WAU, MAU)
 
+
 -- Daily Active Users (DAU)
 SELECT DATE(last_watched) AS watch_date, COUNT(DISTINCT profile_id) AS active_users
 FROM watch_history
 GROUP BY DATE(last_watched)
 ORDER BY watch_date DESC;
-
-
 
 
 -- Weekly Active Users (WAU)
@@ -23,8 +22,6 @@ SELECT TO_CHAR(last_watched, 'YYYY-MM') AS month, COUNT(DISTINCT profile_id) AS 
 FROM watch_history
 GROUP BY TO_CHAR(last_watched, 'YYYY-MM')
 ORDER BY month DESC;
-
-
 
 -- Watch Time Per User
 -- We need to calculate the total minutes watched per user.

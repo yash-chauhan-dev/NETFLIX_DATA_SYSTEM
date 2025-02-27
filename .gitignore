@@ -1,2 +1,4 @@
 venv
 *.log
+streamlit_dashboard/
+.vscode
